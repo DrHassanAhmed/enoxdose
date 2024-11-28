@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enoxaparin Dose Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Enoxaparin Dose Calculator</h1>
+
+        <!-- Input Form -->
+        <div class="form-group">
+            <label for="age">Age (Years):</label>
+            <input type="number" id="age" placeholder="Enter age" required>
+        </div>
+
+        <div class="form-group">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" placeholder="Enter weight" required>
+        </div>
+
+        <div class="form-group">
+            <label for="serumCreatinine">Serum Creatinine (micromol/L):</label>
+            <input type="number" id="serumCreatinine" placeholder="Enter serum creatinine" required>
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="indication">Indication:</label>
+            <select id="indication">
+                <option value="prophylaxis">Prophylaxis</option>
+                <option value="treatment">Treatment</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <button onclick="calculate()">Calculate Dose</button>
+        </div>
+
+        <div id="creatinineClearanceResult"></div>
+        <div id="enoxaparinDoseResult"></div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Developed by Dr Hassan Ahmed, IMT1, Queen Elizabeth Hospital Kings Lynn</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
